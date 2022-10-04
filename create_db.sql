@@ -23,3 +23,11 @@ CREATE TABLE table_books (
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
 );
+
+CREATE TABLE table_journal (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    date_time DATETIME NOT NULL DEFAULT NOW(),
+    table_name TEXT NOT NULL,
+    action TEXT NOT NULL,
+    comment TEXT NOT NULL
+)
