@@ -32,3 +32,13 @@ VALUES ('Аэлита',
         (SELECT author_id
          FROM table_authors
          WHERE last_name = 'Пушкин'));
+
+INSERT INTO table_books(title, genre_id, author_id)
+VALUES ('Анна Каренина',
+        (SELECT genre_id
+         FROM table_genres
+         WHERE genre = 'роман'),
+        (SELECT author_id
+         FROM table_authors
+         WHERE last_name = 'Толстой'
+           AND first_name = 'Лев'));

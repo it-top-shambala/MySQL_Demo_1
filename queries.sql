@@ -8,3 +8,12 @@ FROM table_books
 JOIN table_authors
     ON table_books.author_id = table_authors.author_id
 WHERE table_authors.last_name = 'Пушкин';
+
+SELECT * FROM table_books;
+
+DELETE FROM table_authors
+WHERE author_id = 3;
+
+-- DROP TABLE table_authors;
+-- DROP TABLE table_genres;
+-- DROP TABLE table_books;
